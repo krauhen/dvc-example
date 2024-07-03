@@ -1,12 +1,12 @@
 stages:
   prepare:
     cmd: python src/prepare.py data/data.xml
-    deps:
-    - data/data.xml
-    - src/prepare.py
     params:
     - prepare.seed
     - prepare.split
+    deps:
+    - data/data.xml
+    - src/prepare.py
     outs:
     - data/prepared
   featurize:
